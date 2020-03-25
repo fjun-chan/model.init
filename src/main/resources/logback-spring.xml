@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!-- https://github.com/spring-projects/spring-boot/blob/v1.4.2.RELEASE/spring-boot/src/main/resources/org/springframework/boot/logging/logback/defaults.xml -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <property name="APP_NAME" value="model.init"/>
+    <property name="LOG_PATH" value="${user.home}/logs/${APP_NAME}"/>
+    <property name="LOG_FILE" value="${LOG_PATH}/application.log"/>
+    <property name="DEFAULT_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} [%thread] %.40logger{39} : %m -- %mdc%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+    <property scope="context" name="log.path" value="${LOG_PATH}"/>
+
+    <!-- 控制台 -->
+    <appender name="CONSOLE-APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${DEFAULT_PATTERN}</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE-APPENDER"/>
+    </root>
+
+</configuration>
