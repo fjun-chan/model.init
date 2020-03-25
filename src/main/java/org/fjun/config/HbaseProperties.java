@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @ConfigurationProperties("mw.hbase")
 @Component
-public class HbaseProperties {
+public class HBaseProperties {
     /**
      * zookeeper IP/域名
      */
@@ -23,7 +23,7 @@ public class HbaseProperties {
         return zookeeperQuorum;
     }
 
-    public HbaseProperties setZookeeperQuorum(String zookeeperQuorum) {
+    public HBaseProperties setZookeeperQuorum(String zookeeperQuorum) {
         this.zookeeperQuorum = zookeeperQuorum;
         return this;
     }
@@ -32,7 +32,7 @@ public class HbaseProperties {
         return zookeeperClientPort;
     }
 
-    public HbaseProperties setZookeeperClientPort(int zookeeperClientPort) {
+    public HBaseProperties setZookeeperClientPort(int zookeeperClientPort) {
         this.zookeeperClientPort = zookeeperClientPort;
         return this;
     }
@@ -41,7 +41,7 @@ public class HbaseProperties {
         return hasSnappy;
     }
 
-    public HbaseProperties setHasSnappy(boolean hasSnappy) {
+    public HBaseProperties setHasSnappy(boolean hasSnappy) {
         this.hasSnappy = hasSnappy;
         return this;
     }
