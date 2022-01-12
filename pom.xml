@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <spring.version>5.2.5.RELEASE</spring.version>
+        <spring.version>5.3.14</spring.version>
         <springboot.version>2.2.5.RELEASE</springboot.version>
         <hbase.version>1.4.4</hbase.version>
         <logback.version>1.2.3</logback.version>
